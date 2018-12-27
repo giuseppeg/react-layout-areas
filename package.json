@@ -1,0 +1,57 @@
+{
+  "name": "react-layout-areas",
+  "version": "0.1.0",
+  "description": "Powerful component-based layouts built with CSS Grid areas",
+  "main": "dist/react-layout-areas.js",
+  "files": [
+    "dist",
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "xo",
+    "format": "prettier --single-quote --trailing-comma=es5 --no-semi --write all *.js src/*.js",
+    "build": "microbundle -o dist/ --name ReactLayoutAreas --compress false --sourcemap false --jsx React.createElement",
+    "prepublishOnly": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giuseppeg/react-layout-areas.git"
+  },
+  "keywords": [
+    "layout",
+    "css",
+    "grid",
+    "grids"
+  ],
+  "author": "Giuseppe Gurgone",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/giuseppeg/react-layout-areas/issues"
+  },
+  "homepage": "https://github.com/giuseppeg/react-layout-areas#readme",
+  "devDependencies": {
+    "eslint-config-prettier": "^3.3.0",
+    "microbundle": "^0.9.0",
+    "prettier": "^1.15.3",
+    "xo": "^0.23.0"
+  },
+  "peerDependencies": {
+    "react": "^16.3.0"
+  },
+  "xo": {
+    "envs": [
+      "browser"
+    ],
+    "extends": "prettier",
+    "rules": {
+      "guard-for-in": 0,
+      "unicorn/import-index": 0,
+      "unicorn/filename-case": 0,
+      "unicorn/prefer-type-error": 0,
+      "capitalized-comments": 0
+    }
+  }
+}
